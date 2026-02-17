@@ -1,19 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins" ,sans-serif;
+    font-family: sans-serif;
 }
 
-body{
-    background: #002339;
-    color: #fff;
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e2f;
+    padding: 20px;
 }
 
-.container{
-    margin: 12%;
-    width: 90%;
-    max-width: 700px;
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .display{
@@ -29,9 +35,10 @@ body{
     border-radius: 5px;
 }
 
-.container h1{
+.container h1 {
     font-weight: 500;
-    font-size: 45px;
+    font-size: clamp(24px, 6vw, 45px);
+        line-height: 1.2;
 }
 
 .container span{
@@ -45,27 +52,48 @@ body{
     cursor: pointer;
 }
 
-.display input{
+.display input {
     border: 0;
     outline: 0;
-    font-size: 24px;
+    font-size: clamp(16px, 4vw, 24px);
+        width: 100%;
 }
 
-button{
+button {
+    width: 100%;
     border: none;
     color: white;
     background: #019f55;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: clamp(16px, 4vw, 22px);
     font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 26px;
+    padding: 14px;
     cursor: pointer;
 }
 
 button img{
     width: 30px;
     margin-right: 10px;
+}
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .display {
+        padding: 18px 15px;
+        margin-top: 30px;
+    }
+
+    .container img {
+        width: 24px;
+    }
+
+    button img {
+        width: 22px;
+    }
 }
